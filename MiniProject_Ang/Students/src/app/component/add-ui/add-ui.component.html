@@ -1,0 +1,31 @@
+<div class="col-md-6 offset-md-3">
+    <h3> Create Student </h3>
+    <form (ngSubmit) = "onSubmit()">
+    
+        <div class="form-group">
+            <label> FullName :</label>
+            <input type="text" class ="form-control" id = "name"
+                [(ngModel)] = "std.name" name = "name">
+        </div>
+    
+        <div class="form-group">
+            <label> Age :</label>
+            <input type="number" class ="form-control" id = "age"
+                [(ngModel)] = "std.age" name = "age">
+        </div>
+    
+        <div class="form-group">
+            <label> ClassRoom</label>
+            <input type="text" class ="form-control" id = "classroom"
+                [(ngModel)] = "std.classroom" name = "classroom">
+        </div>
+
+        <div class="form-group">
+            <label> Address</label>
+            <input type="text" class ="form-control" id = "address"
+                [(ngModel)] = "std.address" name = "address">
+        </div>
+        <button class = "btn btn-success" type ="submit">Submit</button>
+    
+    </form>
+    </div> 

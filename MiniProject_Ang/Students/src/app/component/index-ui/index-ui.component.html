@@ -1,0 +1,29 @@
+<h2> Students List</h2>
+<table class = "table table-striped">
+    <thead>
+        <tr>
+            <th> FullName</th>
+            <th> Age</th>
+            <th> ClassRoom</th>
+            <th> Address </th>
+        </tr>
+    </thead>
+    <tbody>
+        <div *ngIf="!stdArr">
+
+            <p>Variable is null.</p>
+          
+          </div>
+        <tr *ngFor = "let s of stdArr" >
+            
+            <td> {{ s.name }} </td>
+            <td> {{ s.age }} </td>
+            <td> {{ s.classroom }} </td>
+            <td> {{ s.address }} </td>
+            <td>
+                <button (click) = "updateStudent(s.id)" class = "btn btn-info"> Update</button>
+                <button (click) = "deleteStudent(s.id)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
+                <button (click) = "studentsDetail(s.id)" class = "btn btn-info" style="margin-left: 10px"> View</button>
+            </td>
+    </tbody>
+</table>
